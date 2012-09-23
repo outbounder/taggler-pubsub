@@ -1,0 +1,15 @@
+{
+  "name": "taggler-pubsub",
+  "private": true,
+  "version": "0.0.0",
+  "main": "taggler-pubsub.js",
+  "dependencies": {
+    "backbone": "latest",
+    "organic-webcell": "0.0.6",
+    "organic": "0.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "BSD"
+}

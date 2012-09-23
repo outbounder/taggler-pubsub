@@ -1,0 +1,21 @@
+{
+  "HttpServer": {
+    "logRoutes": true,
+    "source": "node_modules/organic-webcell/membrane/ExpressHttpServer",
+    "port": 8080,
+    "middleware": [
+      "node_modules/organic-webcell/membrane/expressMiddleware/allowCrossDomain",
+      "node_modules/organic-webcell/membrane/expressMiddleware/bodyParser"
+    ],
+    "routes": {
+      "/emit": {
+        "chain": ["HttpRetransmit", "HttpServer"]
+      }
+    }
+  },
+  "WebSocketServer": {
+    "source": "node_modules/organic-webcell/membrane/WebSocketServer",
+    "logLevel": 1,
+    "attachToChemical": "HttpServer"
+  }
+}
